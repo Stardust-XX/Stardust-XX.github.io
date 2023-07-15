@@ -1,4 +1,21 @@
-<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Introduction to CryptoHack | Stardust‘s Blog</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Introduction to CryptoHack | Stardust‘s Blog</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
 if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
  font-family: BenderLight;
  src: local('Bender'), url("/font/BenderLight.ttf");
@@ -9,13 +26,124 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
   --light-background: url('/img/bk.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Introduction to CryptoHack</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-07-14T01:17:04.000Z" id="date"> 2023-07-14</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-07-14T03:07:14.535Z" id="updated"> 2023-07-14</time></div></span><br><span>Word Count: <div class="control">1.1k</div></span></div></div><hr><div id="post-content"><p>这大概算是我的第一篇博客吧，想通过写博客来记录自己学习的过程，方便自己回顾或者帮助之后的初学者。</p>
+}</style><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Introduction to CryptoHack</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-07-14T01:17:04.000Z" id="date"> 2023-07-14</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-07-15T10:34:33.755Z" id="updated"> 2023-07-15</time></div></span><br><span>Word Count: <div class="control">2.5k</div></span></div></div><hr><div id="post-content"><p>这大概算是我的第一篇博客吧，想通过写博客来记录自己学习的过程，方便自己回顾或者帮助之后的初学者。</p>
 <p>作为CTF初学者，目前最感兴趣且希望深入研究的是密码学-Crypto，校内的学长向我推荐了<a target="_blank" rel="noopener" href="https://cryptohack.org/">CryptoHack</a>这个网站，有许多类似闯关的教程，接下来打算以此网站入门Crypto.</p>
 <span id="more"></span>
-
 <h1 id="Finding-Flags"><a href="#Finding-Flags" class="headerlink" title="Finding Flags"></a>Finding Flags</h1><blockquote>
 <p>Each challenge is designed to help introduce you to a new piece of cryptography. Solving a challenge will require you to find a “flag”.</p>
-<p>These flags will usually be in the format <code>crypto&#123;y0ur_f1rst_fl4g&#125;</code>. The flag format helps you verify that you found the correct solution.</p>
+<p>These flags will usually be in the format <code>crypto{y0ur_f1rst_fl4g}</code>. The flag format helps you verify that you found the correct solution.</p>
 <p>Try submitting this flag into the form below to solve your first challenge.</p>
 </blockquote>
 <p>第一道没什么好说的，介绍了CTF解题是要找出flag。这里flag已经给出，输入便可通关。</p>
@@ -28,72 +156,173 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 </blockquote>
 <p>第二道题则是介绍了Crypto解题需要的工具：Python.</p>
 <p>我们打开附件</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys<br><span class="hljs-comment"># import this</span><br><br><span class="hljs-keyword">if</span> sys.version_info.major == <span class="hljs-number">2</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;You are running Python 2, which is no longer supported. Please update to Python 3.&quot;</span>)<br><br>ords = [<span class="hljs-number">81</span>, <span class="hljs-number">64</span>, <span class="hljs-number">75</span>, <span class="hljs-number">66</span>, <span class="hljs-number">70</span>, <span class="hljs-number">93</span>, <span class="hljs-number">73</span>, <span class="hljs-number">72</span>, <span class="hljs-number">1</span>, <span class="hljs-number">92</span>, <span class="hljs-number">109</span>, <span class="hljs-number">2</span>, <span class="hljs-number">84</span>, <span class="hljs-number">109</span>, <span class="hljs-number">66</span>, <span class="hljs-number">75</span>, <span class="hljs-number">70</span>, <span class="hljs-number">90</span>, <span class="hljs-number">2</span>, <span class="hljs-number">92</span>, <span class="hljs-number">79</span>]<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Here is your flag:&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;&quot;</span>.join(<span class="hljs-built_in">chr</span>(o ^ <span class="hljs-number">0x32</span>) <span class="hljs-keyword">for</span> o <span class="hljs-keyword">in</span> ords))<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> sys<br><span class="hljs-comment"># import this</span><br><br><span class="hljs-keyword">if</span> sys.version_info.major == <span class="hljs-number">2</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">"You are running Python 2, which is no longer supported. Please update to Python 3."</span>)<br><br>ords = [<span class="hljs-number">81</span>, <span class="hljs-number">64</span>, <span class="hljs-number">75</span>, <span class="hljs-number">66</span>, <span class="hljs-number">70</span>, <span class="hljs-number">93</span>, <span class="hljs-number">73</span>, <span class="hljs-number">72</span>, <span class="hljs-number">1</span>, <span class="hljs-number">92</span>, <span class="hljs-number">109</span>, <span class="hljs-number">2</span>, <span class="hljs-number">84</span>, <span class="hljs-number">109</span>, <span class="hljs-number">66</span>, <span class="hljs-number">75</span>, <span class="hljs-number">70</span>, <span class="hljs-number">90</span>, <span class="hljs-number">2</span>, <span class="hljs-number">92</span>, <span class="hljs-number">79</span>]<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">"Here is your flag:"</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">""</span>.join(<span class="hljs-built_in">chr</span>(o ^ <span class="hljs-number">0x32</span>) <span class="hljs-keyword">for</span> o <span class="hljs-keyword">in</span> ords))<br></code></pre></td></tr></table></figure>
 <p>直接运行即可得到flag：crypto{z3n_0f_pyth0n}</p>
 <h1 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h1><blockquote>
 <p>ASCII is a 7-bit encoding standard which allows the representation of text using the integers 0-127.</p>
 <p>Using the below integer array, convert the numbers to their corresponding ASCII characters to obtain a flag.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">[99, 114, 121, 112, 116, 111, 123, 65, 83, 67, 73, 73, 95, 112, 114, 49, 110, 116, 52, 98, 108, 51, 125]<br></code></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
 <p>In Python, the <code>chr()</code> function can be used to convert an ASCII ordinal number to a character (the <code>ord()</code> function does the opposite).</p>
 </blockquote>
 <p>第三题介绍了ASCII码以及Python中的相关函数。</p>
 <p>我们进入Python写一段脚本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">array = [<span class="hljs-number">99</span>, <span class="hljs-number">114</span>, <span class="hljs-number">121</span>, <span class="hljs-number">112</span>, <span class="hljs-number">116</span>, <span class="hljs-number">111</span>, <span class="hljs-number">123</span>, <span class="hljs-number">65</span>, <span class="hljs-number">83</span>, <span class="hljs-number">67</span>, <span class="hljs-number">73</span>, <span class="hljs-number">73</span>, <span class="hljs-number">95</span>, <span class="hljs-number">112</span>, <span class="hljs-number">114</span>, <span class="hljs-number">49</span>, <span class="hljs-number">110</span>, <span class="hljs-number">116</span>, <span class="hljs-number">52</span>, <span class="hljs-number">98</span>, <span class="hljs-number">108</span>, <span class="hljs-number">51</span>, <span class="hljs-number">125</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span> (<span class="hljs-built_in">len</span>(array)):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">chr</span>(array[i]),end=<span class="hljs-string">&#x27;&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">array = [<span class="hljs-number">99</span>, <span class="hljs-number">114</span>, <span class="hljs-number">121</span>, <span class="hljs-number">112</span>, <span class="hljs-number">116</span>, <span class="hljs-number">111</span>, <span class="hljs-number">123</span>, <span class="hljs-number">65</span>, <span class="hljs-number">83</span>, <span class="hljs-number">67</span>, <span class="hljs-number">73</span>, <span class="hljs-number">73</span>, <span class="hljs-number">95</span>, <span class="hljs-number">112</span>, <span class="hljs-number">114</span>, <span class="hljs-number">49</span>, <span class="hljs-number">110</span>, <span class="hljs-number">116</span>, <span class="hljs-number">52</span>, <span class="hljs-number">98</span>, <span class="hljs-number">108</span>, <span class="hljs-number">51</span>, <span class="hljs-number">125</span>]<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span> (<span class="hljs-built_in">len</span>(array)):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">chr</span>(array[i]),end=<span class="hljs-string">''</span>)<br></code></pre></td></tr></table></figure>
 <p>运行可得到flag：crypto{ASCII_pr1nt4bl3}</p>
 <h1 id="Hex"><a href="#Hex" class="headerlink" title="Hex"></a>Hex</h1><blockquote>
 <p>When we encrypt something the resulting ciphertext commonly has bytes which are not printable ASCII characters. If we want to share our encrypted data, it’s common to encode it into something more user-friendly and portable across different systems.</p>
 <p>Hexadecimal can be used in such a way to represent ASCII strings. First each letter is converted to an ordinal number according to the ASCII table (as in the previous challenge). Then the decimal numbers are converted to base-16 numbers, otherwise known as hexadecimal. The numbers can be combined together, into one long hex string.</p>
 <p>Included below is a flag encoded as a hex string. Decode this back into bytes to get the flag.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">63727970746f7b596f755f77696c6c5f62655f776f726b696e675f776974685f6865785f737472696e67735f615f6c6f747d<br></code></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
 <p>  In Python, the <code>bytes.fromhex()</code> function can be used to convert hex to bytes. The <code>.hex()</code> instance method can be called on byte strings to get the hex representation.</p>
 </blockquote>
 <p>第四题介绍了Hex，即16进制数。</p>
 <p>在Python中可以使用<code>bytes.fromhex()</code>和<code>.hex()</code>实现bytes类型与hex类型的转换。</p>
 <p>依旧是使用Python</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">h=<span class="hljs-string">&#x27;63727970746f7b596f755f77696c6c5f62655f776f726b696e675f776974685f6865785f737472696e67735f615f6c6f747d&#x27;</span><br>b=<span class="hljs-built_in">bytes</span>.fromhex(h)<br><span class="hljs-built_in">print</span>(b)<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">h=<span class="hljs-string">'63727970746f7b596f755f77696c6c5f62655f776f726b696e675f776974685f6865785f737472696e67735f615f6c6f747d'</span><br>b=<span class="hljs-built_in">bytes</span>.fromhex(h)<br><span class="hljs-built_in">print</span>(b)<br></code></pre></td></tr></table></figure>
 <p>运行可得到flag：crypto{You_will_be_working_with_hex_strings_a_lot}</p>
 <h1 id="Base64"><a href="#Base64" class="headerlink" title="Base64"></a>Base64</h1><blockquote>
 <p>Another common encoding scheme is Base64, which allows us to represent binary data as an ASCII string using an alphabet of 64 characters. One character of a Base64 string encodes 6 binary digits (bits), and so 4 characters of Base64 encode three 8-bit bytes.</p>
 <p>Base64 is most commonly used online, so binary data such as images can be easily included into HTML or CSS files.</p>
 <p>Take the below hex string, <em>decode</em> it into bytes and then <em>encode</em> it into Base64.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf<br></code></pre></td></tr></table></figure>
-
-</blockquote>
-<blockquote>
 <p> In Python, after importing the base64 module with <code>import base64</code>, you can use the <code>base64.b64encode()</code> function. Remember to decode the hex first as the challenge description states.</p>
 </blockquote>
-<p>第五题介绍了另一个常用的编码：Base64. Base64使用一个64个字符的密码表，即</p class='item-img' data-src='https://www.woolha.com/media/2020/12/base64-table.png'><img src=https://www.woolha.com/media/2020/12/base64-table.png>
-
+<p>第五题介绍了另一个常用的编码：Base64. Base64使用一个64个字符的密码表，即</p>
+<p>
 <p>Base64中1个字符编码6个二进制数字，4个字符编码3个8位字节。</p>
 <p>这道题的题目要求很明确，让我们<strong>解码</strong>为bytes类型再<strong>编码</strong>为Base64类型。</p>
 <p>代码如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> base64<br>h=<span class="hljs-string">&#x27;72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf&#x27;</span><br>b=<span class="hljs-built_in">bytes</span>.fromhex(h)<br>b64=base64.b64encode(b)<br><span class="hljs-built_in">print</span>(b64)<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> base64<br>h=<span class="hljs-string">'72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf'</span><br>b=<span class="hljs-built_in">bytes</span>.fromhex(h)<br>b64=base64.b64encode(b)<br><span class="hljs-built_in">print</span>(b64)<br></code></pre></td></tr></table></figure>
 <h1 id="Bytes-and-Big-Integers"><a href="#Bytes-and-Big-Integers" class="headerlink" title="Bytes and Big Integers"></a>Bytes and Big Integers</h1><blockquote>
 <p>Cryptosystems like RSA works on numbers, but messages are made up of characters. How should we convert our messages into numbers so that mathematical operations can be applied?</p>
-<p>The most common way is to take the ordinal bytes of the message, convert them into hexadecimal, and concatenate. This can be interpreted as a base-16&#x2F;hexadecimal number, and also represented in base-10&#x2F;decimal.</p>
+<p>The most common way is to take the ordinal bytes of the message, convert them into hexadecimal, and concatenate. This can be interpreted as a base-16/hexadecimal number, and also represented in base-10/decimal.</p>
 <p>To illustrate:</p>
 <blockquote>
 <p> message: HELLO<br> ascii bytes: [72, 69, 76, 76, 79]<br> hex bytes: [0x48, 0x45, 0x4c, 0x4c, 0x4f]<br> base-16: 0x48454c4c4f<br> base-10: 310400273487</p>
 </blockquote>
 <p>Convert the following integer back into a message:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">11515195063862318899931685488813747395775516287289682636499965282714637259206269<br></code></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
 <p>Python’s PyCryptodome library implements this with the methods <code>bytes_to_long()</code> and <code>long_to_bytes()</code>. You will first have to install PyCryptodome and import it with <code>from Crypto.Util.number import *</code>. </p>
 </blockquote>
 <p>第六题介绍了bytes与大整数之间的换算，这在后面的RSA加密中也会用到。转换的具体步骤题目中也已经列出，不过我们实际计算只需要一段简单的代码</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> Crypto.Util.number <span class="hljs-keyword">import</span> *<br><br><span class="hljs-built_in">print</span>(long_to_bytes(<span class="hljs-number">11515195063862318899931685488813747395775516287289682636499965282714637259206269</span>))<br></code></pre></td></tr></table></figure>
-
 <p>运行可得到flag：crypto{3nc0d1n6_4ll_7h3_w4y_d0wn}</p>
-<div id="paginator"></div></div><div id="post-footer"></div><div id="comments"><div id="valine"></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://avatars.githubusercontent.com/u/115343437?s=400&amp;u=112fd8d174229964d26c53fd5884e409225e8b62&amp;v=4" alt="Logo"></a><h1 id="Dr"><a target="_blank" rel="noopener" href="https://github.com/Stardust-XX">Stardust</a></h1><div id="description"><p></p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/Stardust-XX"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:therulerofster@gmail.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/38597245"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Finding-Flags"><span class="toc-number">1.</span> <span class="toc-text">Finding Flags</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Great-Snakes"><span class="toc-number">2.</span> <span class="toc-text">Great Snakes</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ASCII"><span class="toc-number">3.</span> <span class="toc-text">ASCII</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hex"><span class="toc-number">4.</span> <span class="toc-text">Hex</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Base64"><span class="toc-number">5.</span> <span class="toc-text">Base64</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Bytes-and-Big-Integers"><span class="toc-number">6.</span> <span class="toc-text">Bytes and Big Integers</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {new Valine({
+<h1 id="XOR-Starter"><a href="#XOR-Starter" class="headerlink" title="XOR Starter"></a>XOR Starter</h1><blockquote>
+<p>XOR is a bitwise operator which returns 0 if the bits are the same, and 1 otherwise. In textbooks the XOR operator is denoted by ⊕, but in most challenges and programming languages you will see the caret <code>^</code> used instead.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For longer binary numbers we XOR bit by bit: <code>0110 ^ 1010 = 1100</code>. We can XOR integers by first converting the integer from decimal to binary. We can XOR strings by first converting each character to the integer representing the Unicode character.</p>
+<p>Given the string <code>label</code>, XOR each character with the integer <code>13</code>. Convert these integers back to a string and submit the flag as <code>crypto{new_string}</code>.</p>
+<p>The Python <code>pwntools</code> library has a convenient <code>xor()</code> function that can XOR together data of different types and lengths. But first, you may want to implement your own function to solve this.</p>
+</blockquote>
+<p>这一题介绍了异或运算，当两个二进制数值相同时结果为0，不同时结果为1。</p>
+<p>题目中介绍了利用<code>pwntools</code>这个库可以快速进行异或运算，但建议我们第一次还是自己来做。</p>
+<p>既然他都那么说了，我们就先不用这个库。<del>当然实在想用也没关系</del></p>
+<p>题目说将每一位都与13进行异或，那我们就先将每个字都转成对应的ASCII码，分别与13异或后再转回字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">str</span>=<span class="hljs-string">'label'</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(<span class="hljs-built_in">str</span>)):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">chr</span>(<span class="hljs-built_in">ord</span>(<span class="hljs-built_in">str</span>[i])^<span class="hljs-number">13</span>),end=<span class="hljs-string">''</span>)<br></code></pre></td></tr></table></figure>
+<p>得到答案为crypto{aloha}</p>
+<h1 id="XOR-Properties"><a href="#XOR-Properties" class="headerlink" title="XOR Properties"></a>XOR Properties</h1><blockquote>
+<p>In the last challenge, you saw how XOR worked at the level of bits. In this one, we’re going to cover the properties of the XOR operation and then use them to undo a chain of operations that have encrypted a flag. Gaining an intuition for how this works will help greatly when you come to attacking real cryptosystems later, especially in the block ciphers category.</p>
+<p>There are four main properties we should consider when we solve challenges using the XOR operator</p>
+<blockquote>
+<p>Commutative: A ⊕ B = B ⊕ A<br>Associative: A ⊕ (B ⊕ C) = (A ⊕ B) ⊕ C<br>Identity: A ⊕ 0 = A<br>Self-Inverse: A ⊕ A = 0</p>
+</blockquote>
+<p>Let’s break this down. Commutative means that the order of the XOR operations is not important. Associative means that a chain of operations can be carried out without order (we do not need to worry about brackets). The identity is 0, so XOR with 0 “does nothing”, and lastly something XOR’d with itself returns zero.</p>
+<p>Let’s put this into practice! Below is a series of outputs where three random keys have been XOR’d together and with the flag. Use the above properties to undo the encryption in the final line to obtain the flag.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">KEY1 = a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313<br>KEY2 ^ KEY1 = 37dcb292030faa90d07eec17e3b1c6d8daf94c35d4c9191a5e1e<br>KEY2 ^ KEY3 = c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1<br>FLAG ^ KEY1 ^ KEY3 ^ KEY2 = 04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf<br></code></pre></td></tr></table></figure>
+</blockquote>
+<p>这一题介绍了异或运算的一些运算性质，更像是一道数学题。</p>
+<script type="math/tex; mode=display">
+\begin{align}
+a&=KEY1 \\
+b&=KEY2\bigoplus KEY1 \\
+c&=KEY2\bigoplus KEY3 \\
+d&=FLAG\bigoplus KEY1 \bigoplus KEY2 \bigoplus KEY3 \\
+\end{align}</script><p>逐步运算，将KEY消掉，得到</p>
+<script type="math/tex; mode=display">
+FLAG=d \bigoplus a\bigoplus c \\</script><p>接下来就很简单了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span> *<br>a=<span class="hljs-built_in">bytes</span>.fromhex(<span class="hljs-string">'a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313'</span>)<br>c=<span class="hljs-built_in">bytes</span>.fromhex(<span class="hljs-string">'c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1'</span>)<br>d=<span class="hljs-built_in">bytes</span>.fromhex(<span class="hljs-string">'04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf'</span>)<br><span class="hljs-built_in">print</span>(xor(a,c,d))<br></code></pre></td></tr></table></figure>
+<p>得到答案为：crypto{x0r_i5_ass0c1at1v3}</p>
+<h1 id="Favourite-byte"><a href="#Favourite-byte" class="headerlink" title="Favourite byte"></a>Favourite byte</h1><blockquote>
+<p>For the next few challenges, you’ll use what you’ve just learned to solve some more XOR puzzles.</p>
+<p>I’ve hidden some data using XOR with a single byte, but that byte is a secret. Don’t forget to decode from hex first.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d<br></code></pre></td></tr></table></figure>
+</blockquote>
+<p>这一题没有教什么新东西，撂下一串数字就让我们综合所学知识求解。</p>
+<p>没什么思路，先转成bytes看一眼</p>
+<blockquote>
+<p>b”sbi`d\x7fk h! O!%O}iOv$f eb!’#Ori’um”</p>
+</blockquote>
+<p>是一串没有什么意义的字符，题目中说这串字符经过XOR加密，但我们并不知道密钥是什么。</p>
+<h2 id="穷举"><a href="#穷举" class="headerlink" title="穷举"></a>穷举</h2><p>既然如此，我们可以用穷举法依次尝试</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span> *<br>h=<span class="hljs-built_in">bytes</span>.fromhex(<span class="hljs-string">'73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d'</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">20</span>):<br>    <span class="hljs-built_in">print</span>(xor(h,i))<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">b"sbi`d\x7fk h! O!%O}iOv$f eb!'#Ori'um"<br>b'rchae~j!i !N $N|hNw%g!dc &amp;"Nsh&amp;tl'<br>b'q`kbf}i"j#"M#\'M\x7fkMt&amp;d"g`#%!Mpk%wo'<br>b'pajcg|h#k"#L"&amp;L~jLu\'e#fa"$ Lqj$vn'<br>b"wfmd`{o$l%$K%!KymKr b$af%#'Kvm#qi"<br>b'vgleazn%m$%J$ JxlJs!c%`g$"&amp;Jwl"ph'<br>b'udofbym&amp;n\'&amp;I\'#I{oIp"`&amp;cd\'!%Ito!sk'<br>b'tengcxl\'o&amp;\'H&amp;"HznHq#a\'be&amp; $Hun rj'<br>b'{jahlwc(`)(G)-GuaG~,n(mj)/+Gza/}e'<br>b'zk`imvb)a()F(,Ft`F\x7f-o)lk(.*F{`.|d'<br>b'yhcjnua*b+*E+/EwcE|.l*oh+-)Exc-\x7fg'<br>b'xibkot`+c*+D*.DvbD}/m+ni*,(Dyb,~f'<br>b'\x7fnelhsg,d-,C-)CqeCz(j,in-+/C~e+ya'<br>b'~odmirf-e,-B,(BpdB{)k-ho,*.B\x7fd*x`'<br>b'}lgnjqe.f/.A/+AsgAx*h.kl/)-A|g){c'<br>b'|mfokpd/g./@.*@rf@y+i/jm.(,@}f(zb'<br>b'crypto{0x10_15_my_f4v0ur173_by7e}'<br>b'bsxqunz1y01^04^lx^g5w1ts062^cx6d|'<br>b'ap{rvmy2z32]37]o{]d6t2wp351]`{5g\x7f'<br>b'`qzswlx3{23\\26\\nz\\e7u3vq240\\az4f~'<br></code></pre></td></tr></table></figure>
+<p>可以在里面找到crypto{0x10_15_my_f4v0ur173_by7e}，这便是答案了</p>
+<h2 id="倒推"><a href="#倒推" class="headerlink" title="倒推"></a>倒推</h2><p>从另一个角度想，虽然我们不知道密钥是什么，但我们知道答案一定是以<code>crypto{</code>开头。那由异或的运算性质，将密文的第一位与c进行异或运算，得出的结果就是密钥了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span> *<br>h=<span class="hljs-built_in">bytes</span>.fromhex(<span class="hljs-string">'73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d'</span>)<br>key=h[<span class="hljs-number">0</span>]^<span class="hljs-built_in">ord</span>(<span class="hljs-string">'c'</span>)<br><span class="hljs-built_in">print</span>(key)<br><span class="hljs-built_in">print</span>(xor(key,h))<br></code></pre></td></tr></table></figure>
+<p>输出结果为</p>
+<blockquote>
+<p>16<br>b’crypto{0x10_15_my_f4v0ur173_by7e}’</p>
+</blockquote>
+<h1 id="You-either-know-XOR-you-don’t"><a href="#You-either-know-XOR-you-don’t" class="headerlink" title="You either know, XOR you don’t"></a>You either know, XOR you don’t</h1><blockquote>
+<p>I’ve encrypted the flag with my secret key, you’ll never be able to guess it.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104<br></code></pre></td></tr></table></figure>
+<p>Remember the flag format and how it might help you in this challenge!</p>
+</blockquote>
+<p>新手村的最后一题，提示中提到了flag形式，那就是暗示我们用倒推法解这道题</p>
+<p>复制上一题的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span> *<br>h=<span class="hljs-built_in">bytes</span>.fromhex(<span class="hljs-string">'0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104'</span>)<br>key=h[<span class="hljs-number">0</span>]^<span class="hljs-built_in">ord</span>(<span class="hljs-string">'c'</span>)<br><span class="hljs-built_in">print</span>(key)<br><span class="hljs-built_in">print</span>(xor(key,h))<br></code></pre></td></tr></table></figure>
+<p>得出结果…</p>
+<blockquote>
+<p>109<br>b’cfLRKis%fKL\x12JYCz0cjgQ6}SHKL\x12JYCz0cj\x13KY&lt;xli’</p>
+</blockquote>
+<p>呃，好像不太对？</p>
+<p>那就把所有已知片段都异或进去看看</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(xor(h,<span class="hljs-string">b'crypto{'</span>))<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>b’myXORke+y_Q\x0bHOMe$~seG8bGURN\x04DFWg)a|\x1dTM!an\x7f’</p>
+</blockquote>
+<p>myXORke+y……?</p>
+<p>根据语义判断，密钥很可能是myXORkey，代入试试</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(xor(h,<span class="hljs-string">b'myXORkey'</span>))<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>b’crypto{1f_y0u_Kn0w_En0uGH_y0u_Kn0w_1t_4ll}’</p>
+</blockquote>
+<p>显然这就是答案了。</p>
+<hr>
+<p>新手村的内容到此就结束了，这一章节里学到了像ASCII码、16进制、Base64以及XOR运算等密码学中常用的内容，并且锻炼了一些使用Python解题的能力。下一章等什么时候有空再学吧（</p>
+</p><div id="paginator"></div></div><div id="post-footer"></div><div id="comments"><div id="valine"></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://avatars.githubusercontent.com/u/115343437?s=400&amp;u=112fd8d174229964d26c53fd5884e409225e8b62&amp;v=4" alt="Logo"></a><h1 id="Dr"><a target="_blank" rel="noopener" href="https://github.com/Stardust-XX">Stardust</a></h1><div id="description"><p></p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/Stardust-XX"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:therulerofster@gmail.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/38597245"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Finding-Flags"><span class="toc-number">1.</span> <span class="toc-text">Finding Flags</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Great-Snakes"><span class="toc-number">2.</span> <span class="toc-text">Great Snakes</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ASCII"><span class="toc-number">3.</span> <span class="toc-text">ASCII</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hex"><span class="toc-number">4.</span> <span class="toc-text">Hex</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Base64"><span class="toc-number">5.</span> <span class="toc-text">Base64</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Bytes-and-Big-Integers"><span class="toc-number">6.</span> <span class="toc-text">Bytes and Big Integers</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#XOR-Starter"><span class="toc-number">7.</span> <span class="toc-text">XOR Starter</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#XOR-Properties"><span class="toc-number">8.</span> <span class="toc-text">XOR Properties</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Favourite-byte"><span class="toc-number">9.</span> <span class="toc-text">Favourite byte</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A9%B7%E4%B8%BE"><span class="toc-number">9.1.</span> <span class="toc-text">穷举</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%92%E6%8E%A8"><span class="toc-number">9.2.</span> <span class="toc-text">倒推</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#You-either-know-XOR-you-don%E2%80%99t"><span class="toc-number">10.</span> <span class="toc-text">You either know, XOR you don’t</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {new Valine({
  el: '#valine'
  , appId: 'a2cbBGsWUZQaL1J8U3yUY0pI-gzGzoHsz'
  , appKey: 'ChUAgTkvreWiZC9HtZaBSjcX' , placeholder: 'This comment is sent by Penguin Logistics.'
