@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Symmetric Cryptography | Stardust‘s Blog</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"Enter here","blurHolder":"Search","noResult":"Data \"$0\" not found"},"code":{"codeInfo":"$0 - $1 lines","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+  --light-background: url('/img/bk.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="Search" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Symmetric Cryptography</h1><div id="post-info"><span>First Post: <div class="control"><time datetime="2023-07-29T11:35:32.000Z" id="date"> 2023-07-29</time></div></span><br><span>Last Update: <div class="control"><time datetime="2023-07-29T14:42:55.912Z" id="updated"> 2023-07-29</time></div></span><br><span>Word Count: <div class="control">1.3k</div></span></div></div><hr><div id="post-content"><p><a target="_blank" rel="noopener" href="https://cryptohack.org/">CryptoHack</a>教程的第三章：对称密码学。</p>
+<span id="more"></span>
+<h1 id="Keyed-Permutations"><a href="#Keyed-Permutations" class="headerlink" title="Keyed Permutations"></a>Keyed Permutations</h1><blockquote>
+<p>AES, like all good block ciphers, performs a “keyed permutation”. This means that it maps every possible input block to a unique output block, with a key determining which permutation to perform.</p>
+<blockquote>
+<p>A “block” just refers to a fixed number of bits or bytes, which may represent any kind of data. AES processes a block and outputs another block. We’ll be specifically talking the variant of AES which works on 128 bit (16 byte) blocks and a 128 bit key, known as AES-128.</p>
+</blockquote>
+<p>Using the same key, the permutation can be performed in reverse, mapping the output block back to the original input block. It is important that there is a one-to-one correspondence between input and output blocks, otherwise we wouldn’t be able to rely on the ciphertext to decrypt back to the same plaintext we started with.</p>
+<p>What is the mathematical term for a one-to-one correspondence?</p>
+</blockquote>
+<p>第一题是问一一对应在数学中的术语叫什么，<del>我问了隔壁数学系的朋友才知道是双射。</del></p>
+<p>答案是<code>crypto{bijection}</code></p>
+<h1 id="Resisting-Bruteforce"><a href="#Resisting-Bruteforce" class="headerlink" title="Resisting Bruteforce"></a>Resisting Bruteforce</h1><blockquote>
+<p>If a block cipher is secure, there should be no way for an attacker to distinguish the output of AES from a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pseudorandom_permutation">random permutation</a> of bits. Furthermore, there should be no better way to undo the permutation than simply bruteforcing every possible key. That’s why academics consider a cipher theoretically “broken” if they can find an attack that takes fewer steps to perform than bruteforcing the key, even if that attack is practically infeasible.</p>
+<blockquote>
+<p>How difficult is it to bruteforce a 128-bit keyspace? <a target="_blank" rel="noopener" href="https://crypto.stackexchange.com/a/48669">Somebody estimated</a> that if you turned the power of the entire Bitcoin mining network against an AES-128 key, it would take over a hundred times the age of the universe to crack the key.</p>
+</blockquote>
+<p>It turns out that there is <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Biclique_attack">an attack</a> on AES that’s better than bruteforce, but only slightly – it lowers the security level of AES-128 down to 126.1 bits, and hasn’t been improved on for over 8 years. Given the large “security margin” provided by 128 bits, and the lack of improvements despite extensive study, it’s not considered a credible risk to the security of AES. But yes, in a very narrow sense, it “breaks” AES.</p>
+<p>Finally, while quantum computers have the potential to completely break popular public-key cryptosystems like RSA via <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Shor&#39;s_algorithm">Shor’s algorithm</a>, they are thought to only cut in half the security level of symmetric cryptosystems via <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Grover&#39;s_algorithm">Grover’s algorithm</a>. This is one reason why people recommend using AES-256, despite it being less performant, as it would still provide a very adequate 128 bits of security in a quantum future.</p>
+<p>What is the name for the best single-key attack against AES?</p>
+</blockquote>
+<p>这一题也是单纯的讲解，答案就在上文蓝字的<strong>an attack</strong>中，即<code>crypto{biclique}</code></p>
+<h1 id="Structure-of-AES"><a href="#Structure-of-AES" class="headerlink" title="Structure of AES"></a>Structure of AES</h1><blockquote>
+<p>To achieve a keyed permutation that is infeasible to invert without the key, AES applies a large number of ad-hoc mixing operations on the input. This is in stark contrast to public-key cryptosystems like RSA, which are based on elegant individual mathematical problems. AES is much less elegant, but it’s very fast.</p>
+<p>At a high level, AES-128 begins with a “key schedule” and then runs 10 rounds over a state. The starting state is just the plaintext block that we want to encrypt, represented as a 4x4 matrix of bytes. Over the course of the 10 rounds, the state is repeatedly modified by a number of invertible transformations.</p>
+<blockquote>
+<p>Each transformation step has a defined purpose based on theoretical properties of secure ciphers established by Claude Shannon in the 1940s. We’ll look closer at each of these in the following challenges.</p>
+</blockquote>
+<p>Here’s an overview of the phases of AES encryption:</p>
+<p class='item-img' data-src='https://cryptohack.org/static/img/aes/Structure.png'><img src="https://cryptohack.org/static/img/aes/Structure.png" alt="diagram showing AES rounds"></p>
+<ol>
+<li><strong>KeyExpansion</strong> or Key Schedule</li>
+</ol>
+<p> From the 128 bit key, 11 separate 128 bit “round keys” are derived: one to be used in each AddRoundKey step.</p>
+<ol>
+<li><strong>Initial key addition</strong></li>
+</ol>
+<p> <em>AddRoundKey</em> - the bytes of the first round key are XOR’d with the bytes of the state.</p>
+<ol>
+<li><strong>Round</strong> - this phase is looped 10 times, for 9 main rounds plus one “final round”</li>
+</ol>
+<p> a) <em>SubBytes</em> - each byte of the state is substituted for a different byte according to a lookup table (“S-box”).</p>
+<p> b) <em>ShiftRows</em> - the last three rows of the state matrix are transposed—shifted over a column or two or three.</p>
+<p> c) <em>MixColumns</em> - matrix multiplication is performed on the columns of the state, combining the four bytes in each column. This is skipped in the final round.</p>
+<p> d) <em>AddRoundKey</em> - the bytes of the current round key are XOR’d with the bytes of the state.</p>
+<p>Included is a <code>bytes2matrix</code> function for converting our initial plaintext block into a state matrix. Write a <code>matrix2bytes</code> function to turn that matrix back into bytes, and submit the resulting plaintext as the flag.</p>
+<p><strong>Challenge files:</strong><br> - <a target="_blank" rel="noopener" href="https://cryptohack.org/static/challenges/matrix_e1b463dddbee6d17959618cf370ff1a5.py">matrix.py</a></p>
+<p><strong>Resources:</strong><br> - <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=gP4PqVGudtg">YouTube: AES Rijndael Cipher explained as a Flash animation</a></p>
+</blockquote>
+<p>这一节介绍了AES的结构，题目则是让我们写函数实现矩阵转换为bytes字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">matrix2bytes</span>(<span class="hljs-params">matrix</span>):<br>    text=<span class="hljs-string">''</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(matrix)):<br>        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(matrix[<span class="hljs-number">0</span>])):<br>            text+=(<span class="hljs-built_in">chr</span>(matrix[i][j]))<br>    <span class="hljs-keyword">return</span> text<br></code></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">matrix2bytes</span>(<span class="hljs-params">matrix</span>):<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">bytes</span>(<span class="hljs-built_in">sum</span>(matrix, []))<br></code></pre></td></tr></table></figure>
+<p>答案为<code>crypto{inmatrix}</code></p>
+<h1 id="Round-Keys"><a href="#Round-Keys" class="headerlink" title="Round Keys"></a>Round Keys</h1><blockquote>
+<p>We’re going to skip over the finer details of the <strong>KeyExpansion</strong> phase for now. The main point is that it takes in our 16 byte key and produces 11 4x4 matrices called “round keys” derived from our initial key. These round keys allow AES to get extra mileage out of the single key that we provided.</p>
+<p>The <strong>initial key addition</strong> phase, which is next, has a single <em>AddRoundKey</em> step. The <em>AddRoundKey</em> step is straightforward: it XORs the current state with the current round key.</p>
+<p class='item-img' data-src='https://cryptohack.org/static/img/aes/AddRoundKey.png'><img src="https://cryptohack.org/static/img/aes/AddRoundKey.png" alt="diagram showing AddRoundKey"></p>
+<p><em>AddRoundKey</em> also occurs as the final step of each round. <em>AddRoundKey</em> is what makes AES a “keyed permutation” rather than just a permutation. It’s the only part of AES where the key is mixed into the state, but is crucial for determining the permutation that occurs.</p>
+<p>As you’ve seen in previous challenges, XOR is an easily invertible operation if you know the key, but tough to undo if you don’t. Now imagine trying to recover plaintext which has been XOR’d with 11 different keys, and heavily jumbled between each XOR operation with a series of substitution and transposition ciphers. That’s kinda what AES does! And we’ll see just how effective the jumbling is in the next few challenges.</p>
+<p>Complete the <code>add_round_key</code> function, then use the <code>matrix2bytes</code> function to get your next flag.</p>
+<p><strong>Challenge files:</strong><br> - <a target="_blank" rel="noopener" href="https://cryptohack.org/static/challenges/add_round_key_b67b9a529ae739156107a74b14adde98.py">add_round_key.py</a></p>
+</blockquote>
+<p>这一节讲了AES中AddRoundKey这一操作，实际需要我们做的就是将两个矩阵中每一项分别异或并放入新矩阵。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">add_round_key</span>(<span class="hljs-params">s, k</span>):<br>    <span class="hljs-keyword">return</span> [[sss ^ kkk <span class="hljs-keyword">for</span> sss, kkk <span class="hljs-keyword">in</span> <span class="hljs-built_in">zip</span>(ss, kk)] <span class="hljs-keyword">for</span> ss, kk <span class="hljs-keyword">in</span> <span class="hljs-built_in">zip</span>(s, k)]<br></code></pre></td></tr></table></figure>
+<p>得到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">[[99, 114, 121, 112], [116, 111, 123, 114], [48, 117, 110, 100], [107, 51, 121, 125]]<br></code></pre></td></tr></table></figure>
+<p>再用上一题中的函数求得<code>crypto{r0undk3y}</code></p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2023/07/23/Modular-Arithmetic/">Modular Arithmetic Prev →</a></div></div></div><div id="comments"><div id="valine"></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="To Top" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="To Catalog">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="Change Theme"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://avatars.githubusercontent.com/u/115343437?s=400&amp;u=112fd8d174229964d26c53fd5884e409225e8b62&amp;v=4" alt="Logo"></a><h1 id="Dr"><a target="_blank" rel="noopener" href="https://github.com/Stardust-XX">Stardust</a></h1><div id="description"><p></p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/Stardust-XX"><i class="fab fa-github" alt="GitHub"></i></a><a class="social" href="mailto:therulerofster@gmail.com"><i class="fa fa-envelope" alt="E-Mail"></i></a><a class="social" target="_blank" rel="noopener" href="https://space.bilibili.com/38597245"><i class="fa-brands fa-bilibili" alt="BiliBili"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>Catalog</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Keyed-Permutations"><span class="toc-number">1.</span> <span class="toc-text">Keyed Permutations</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Resisting-Bruteforce"><span class="toc-number">2.</span> <span class="toc-text">Resisting Bruteforce</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Structure-of-AES"><span class="toc-number">3.</span> <span class="toc-text">Structure of AES</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Round-Keys"><span class="toc-number">4.</span> <span class="toc-text">Round Keys</span></a></li></ol></div></div><footer><nobr>Published with <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> Theme <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>by <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {new Valine({
+ el: '#valine'
+ , appId: 'a2cbBGsWUZQaL1J8U3yUY0pI-gzGzoHsz'
+ , appKey: 'ChUAgTkvreWiZC9HtZaBSjcX' , placeholder: 'This comment is sent by Penguin Logistics.'
+ , path: window.location.pathname
+});document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>
